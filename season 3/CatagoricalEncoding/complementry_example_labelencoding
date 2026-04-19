@@ -1,0 +1,17 @@
+import pandas as pd
+import numpy as np
+# Example dataframe
+df = pd.DataFrame({
+    "satisfaction_grade": ['midrate', 'high', 'midrate', 'low']
+})
+# Dictionary of the grade
+satisfaction_order = {
+    1: "low",
+    2: "midrate",
+    3: "high"
+}
+# Manual label encoding 
+df['satisfaction_grade_code'] = df['satisfaction_grade'].map(satisfaction_order)
+print("after label encoding satisfaction grade for:")
+print(df[['satisfaction_grade_code','satisfaction_grade']])
+print("\n" + "-" * 30 + "\n")

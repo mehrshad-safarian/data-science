@@ -1,0 +1,12 @@
+import pandas as pd 
+df = pd.read_csv("I:/begining og data_scince/pandas/data.csv")
+print(df.describe())
+print()
+print(df["Age"])
+print()
+print(df.iloc[5])
+print()
+mean_age = df["Age"].mean()
+print("Age av:" , mean_age)
+print()
+print(df["Age"]>=22)
